@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./index.js"></script>
+</head>
+
+<style>
+    div {
+      border: 1px solid black;
+      width: 200px;
+      height: 100px;
+      overflow: scroll;
+    }
+</style>
+    
+<!-- <body onclick="getId(this.id)"> -->
+<body>
+    <h1>Hello</h1>
+    <button id='btn-id' onclick="handleClick()">Button with id</button>
+    <button class="btn-cl" onclick="handleClick()">Button With class</button>
+
+    
+    <script>
+        function handleClick() {
+            document.getElementById('btn-id').innerHTML = "Clicked Once";
+        }
+    </script>
+</body>
+</html>
