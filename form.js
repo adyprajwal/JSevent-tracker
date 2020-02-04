@@ -1,12 +1,11 @@
-//Form Event Tracker
-// kinput.onkeydown = kinput.onkeyup = kinput.onkeypress = handle;
-
+//FORM EVENT TRACKER
 
 //FOCUS & BLUR
 let focusElements = [];
 let blurElements = [];
 
 runOnFocus = (event) => {
+   
     focusElements.push({
         tag: event.target.tagName,
         id: event.target.id,
@@ -25,10 +24,12 @@ runOnBlur = (event) => {
     console.log("Blurred: ")
     console.log(blurElements);
 }
+const input = document.querySelector('input[type="text"]')
 
-window.addEventListener("focus", runOnFocus);
-window.addEventListener("blur", runOnBlur);
+input.addEventListener("focus", runOnFocus);
+input.addEventListener("blur", runOnBlur);
 
+/*********************************************************************/ 
 
 //KEYUP, KEYDOWN, KEYPRESS
 let keydownElements = [];
