@@ -1,15 +1,10 @@
-//CLICK HANDLER
+function handleClick() {
+    document.getElementById('btn-id').innerHTML = "Clicked Once";
+}
 
-let idArray = [];
-window.addEventListener("click", function(event){
-    let x = event.target;
-    console.log("id: " + x.id);
-    console.log("classname: " + x.className);
-    console.log("tag: " + x.tagName);
-   
+let scrolls = 0
+function handleScroll() {
+    document.getElementById("lorem").innerHTML = scrolls += 1;
+}
 
-});
-
-
-//SCROLL HANDLER
 
