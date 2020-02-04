@@ -2,17 +2,44 @@
 // kinput.onkeydown = kinput.onkeyup = kinput.onkeypress = handle;
 
 
+//FOCUS & BLUR
+let focusElements = [];
+let blurElements = [];
+
+runOnFocus = (event) => {
+    focusElements.push({
+        tag: event.target.tagName,
+        id: event.target.id,
+        classname: event.target.className
+    })
+    console.log("Focused: ")
+    console.log(focusElements);
+}
+
+runOnBlur = (event) => {
+    blurElements.push({
+        tag: event.target.tagName,
+        id: event.target.id,
+        classname: event.target.className
+    })
+    console.log("Blurred: ")
+    console.log(blurElements);
+}
+
+window.addEventListener("focus", runOnFocus);
+window.addEventListener("blur", runOnBlur);
 
 
-//KEYUP KEYDOWN KEYPRESS
+//KEYUP, KEYDOWN, KEYPRESS
 let keydownElements = [];
 let keyupElements = [];
-// let keypress = [];
+
 runOnKeydown = (event) => {
     keydownElements.push({
         key: event.key,
         code: event.code
     })
+    console.log("KeyDown: ")
     console.log(keydownElements);
 }
 
@@ -21,12 +48,9 @@ runOnKeyup = () => {
         key: event.key,
         code: event.code
     })
+    console.log("KeyUp: ")
     console.log(keyupElements);
 }
-// keypress.push({
-//     keydownElements: keydownElements,
-//     keyupElements: keyupElements
-// })
-// console.log(keypress);
+
 window.addEventListener("keydown", runOnKeydown);
 window.addEventListener("keyup", runOnKeyup);
