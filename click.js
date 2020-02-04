@@ -1,8 +1,10 @@
-//CLICK HANDLER
+//Click Event Tracker
+let clickElements = [];
 runOnClick = (event) => {
-    let x = event.target;
-    console.log("id: " + x.id);
-    console.log("classname: " + x.className);
-    console.log("tag: " + x.tagName);   
-} 
+    clickElements.push({
+        tag: event.target.tagName,
+        id: event.target.id,
+        classname: event.target.className})
+    console.log(clickElements);
+}
 window.addEventListener("click", runOnClick);

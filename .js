@@ -1,19 +1,15 @@
-//Form Event Tracker
+//Keyboard Event Tracker
 // kinput.onkeydown = kinput.onkeyup = kinput.onkeypress = handle;
 
-
-
-
-//KEYUP KEYDOWN KEYPRESS
 let keydownElements = [];
 let keyupElements = [];
-// let keypress = [];
+let keypress = [];
 runOnKeydown = (event) => {
     keydownElements.push({
         key: event.key,
         code: event.code
     })
-    console.log(keydownElements);
+    // console.log(keydownElements);
 }
 
 runOnKeyup = () => {
@@ -21,12 +17,13 @@ runOnKeyup = () => {
         key: event.key,
         code: event.code
     })
-    console.log(keyupElements);
+    // console.log(keyupElements);
 }
-// keypress.push({
-//     keydownElements: keydownElements,
-//     keyupElements: keyupElements
-// })
-// console.log(keypress);
+keypress.push({
+    keydownElements: keydownElements,
+    keyupElements: keyupElements
+})
+console.log(keypress);
 window.addEventListener("keydown", runOnKeydown);
 window.addEventListener("keyup", runOnKeyup);
+
