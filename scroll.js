@@ -1,7 +1,14 @@
 //Scroll Event Tracker
+let scrollElements = [];
 runOnScroll = (event) => {
-    let x = event.target;
-    console.log("id: " + x.id);
+    scrollElements.push({
+        tag: event.target.tagName,
+        id: event.target.id,
+        classname: event.target.className
+    })
+    console.log("Scrolled: ", scrollElements);
 }
-window.addEventListener('scroll', function() { console.log('testing') }, false);
-    
+const scroll = document.querySelectorAll('*');
+for(i=0; i< scroll.length; i++) {
+    scroll[i].addEventListener('scroll', runOnScroll)
+}
