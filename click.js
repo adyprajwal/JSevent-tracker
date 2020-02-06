@@ -4,9 +4,8 @@ runOnClick = (event) => {
     clickElements.push({
         tag: event.target.tagName,
         id: event.target.id,
-        classname: event.target.className
+        class: event.target.className
     })
-    console.log("Clicked:")
-    console.log(clickElements);
+    console.log("Clicked: ", clickElements);
 }
 window.addEventListener("click", runOnClick);

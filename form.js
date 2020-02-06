@@ -9,20 +9,18 @@ runOnFocus = (event) => {
     focusElements.push({
         tag: event.target.tagName,
         id: event.target.id,
-        classname: event.target.className
+        class: event.target.className
     })
-    console.log("Focused: ")
-    console.log(focusElements);
+    console.log("Focused: ", focusElements);
 }
 
 runOnBlur = (event) => {
     blurElements.push({
         tag: event.target.tagName,
         id: event.target.id,
-        classname: event.target.className
+        class: event.target.className
     })
-    console.log("Blurred: ")
-    console.log(blurElements);
+    console.log("Blurred: ", blurElements);
 }
 const input = document.querySelector('input[type="text"]')
 

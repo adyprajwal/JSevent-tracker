@@ -4,7 +4,7 @@ runOnScroll = (event) => {
     scrollElements.push({
         tag: event.target.tagName,
         id: event.target.id,
-        classname: event.target.className
+        class: event.target.className
     })
     console.log("Scrolled: ", scrollElements);
 }
